@@ -1,20 +1,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { supabase } from "@/integrations/supabase/client";
+
+const GEMINI_API_KEY = "AIzaSyC6UjjDG1ACQV6aN7_Ab3CNGUDzaHY1LfI";
 
 export const getChatResponse = async (message: string) => {
   try {
-    // الحصول على مفتاح API من Supabase
-    const { data: secrets, error } = await supabase
-      .from('secrets')
-      .select('value')
-      .eq('name', 'GEMINI_API_KEY')
-      .single();
-
-    if (error || !secrets?.value) {
-      throw new Error("الرجاء إدخال مفتاح Gemini API في إعدادات المشروع");
-    }
-
-    const genAI = new GoogleGenerativeAI(secrets.value);
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const enhancedPrompt = `
