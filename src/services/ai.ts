@@ -15,9 +15,17 @@ export const getChatResponse = async (message: string) => {
 
     const result = await model.generateContent(enhancedPrompt);
     const response = await result.response;
+    
+    if (!response || !response.text) {
+      throw new Error("لم نتمكن من الحصول على رد من الخدمة");
+    }
+    
     return response.text();
   } catch (error: any) {
     console.error("خطأ في الحصول على رد AI:", error);
-    throw new Error(error.message || "عذراً، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.");
+    
+    // تحسين رسالة الخطأ للمستخدم
+    const errorMessage = error.message || "عذراً، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.";
+    throw new Error(errorMessage);
   }
 };
