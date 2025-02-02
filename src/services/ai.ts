@@ -1,16 +1,22 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { supabase } from "@/integrations/supabase/client";
 
 export const getChatResponse = async (message: string) => {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    throw new Error("الرجاء إدخال مفتاح Gemini API");
-  }
-
-  const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-
   try {
-    // تحسين نص الطلب لتوجيه النموذج نحو إجابات أكثر ذكاءً
+    // الحصول على مفتاح API من Supabase
+    const { data: secrets, error } = await supabase
+      .from('secrets')
+      .select('value')
+      .eq('name', 'GEMINI_API_KEY')
+      .single();
+
+    if (error || !secrets?.value) {
+      throw new Error("الرجاء إدخال مفتاح Gemini API في إعدادات المشروع");
+    }
+
+    const genAI = new GoogleGenerativeAI(secrets.value);
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
     const enhancedPrompt = `
       أنت مساعد ذكي ومفيد. يرجى الإجابة على السؤال التالي بشكل مفصل ودقيق، مع تقديم أمثلة عملية عند الحاجة:
 
@@ -20,8 +26,8 @@ export const getChatResponse = async (message: string) => {
     const result = await model.generateContent(enhancedPrompt);
     const response = await result.response;
     return response.text();
-  } catch (error) {
+  } catch (error: any) {
     console.error("خطأ في الحصول على رد AI:", error);
-    throw new Error("عذراً، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.");
+    throw new Error(error.message || "عذراً، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.");
   }
 };
