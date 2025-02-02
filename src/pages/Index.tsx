@@ -75,7 +75,7 @@ const Index = () => {
                 <h1 className="mb-8 text-4xl font-semibold text-center">كيف يمكنني مساعدتك؟</h1>
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
               </div>
-              <ActionButtons />
+              <ActionButtons onSend={handleSendMessage} />
             </div>
           ) : (
             <>
