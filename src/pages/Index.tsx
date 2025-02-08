@@ -73,9 +73,9 @@ const Index = () => {
           {messages.length === 0 ? (
             <div className="w-full max-w-3xl px-4 space-y-8">
               <div className="text-center space-y-6">
-                <h1 className="text-4xl font-semibold">Welcome to Our AI Assistant</h1>
+                <h1 className="text-4xl font-semibold">Welcome to Nibras AI Assistant</h1>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  Our AI assistant is here to help you with various tasks including:
+                  Nibras AI assistant is here to help you with various tasks including:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
                   <div className="p-4 bg-gray-800 rounded-lg">
@@ -118,3 +118,4 @@ const Index = () => {
 };
 
 export default Index;
+
