@@ -107,7 +107,7 @@ const Index = () => {
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
               </div>
               <div className="text-xs text-center text-gray-500 py-2">
-                Please verify any important information.
+                Your conversations are automatically saved
               </div>
             </>
           )}
