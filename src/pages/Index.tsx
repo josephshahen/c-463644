@@ -71,33 +71,73 @@ const Index = () => {
         
         <div className={`flex h-full flex-col ${messages.length === 0 ? 'items-center justify-start pt-16' : 'justify-between'} pt-[60px] pb-4`}>
           {messages.length === 0 ? (
-            <div className="w-full max-w-3xl px-4 space-y-8">
+            <div className="w-full max-w-4xl px-4 space-y-12">
               <div className="text-center space-y-6">
-                <h1 className="text-4xl font-semibold">Welcome to Nibras AI Assistant</h1>
+                <h1 className="text-4xl font-semibold">مساعد نبراس الذكي</h1>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  Nibras AI assistant is here to help you with various tasks including:
+                  مرحباً بك في مساعد نبراس الذكي - منصتك الشاملة للمساعدة في مختلف المجالات
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                  <div className="p-4 bg-gray-800 rounded-lg">
-                    <h3 className="font-medium mb-2">General Questions</h3>
-                    <p className="text-sm text-gray-400">Get answers to your questions on any topic</p>
+              </div>
+
+              {/* Featured Services */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                  <h3 className="font-semibold text-xl mb-3">المساعدة التعليمية</h3>
+                  <p className="text-gray-400 mb-4">نقدم دعماً شاملاً في جميع المواد الدراسية، مع شرح مفصل وأمثلة عملية</p>
+                  <ul className="text-sm text-gray-300 space-y-2">
+                    <li>• شرح المفاهيم الأساسية</li>
+                    <li>• حل المسائل والتمارين</li>
+                    <li>• تقديم أمثلة توضيحية</li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                  <h3 className="font-semibold text-xl mb-3">البحث والكتابة</h3>
+                  <p className="text-gray-400 mb-4">نساعدك في كتابة المحتوى وإجراء البحوث بجودة عالية</p>
+                  <ul className="text-sm text-gray-300 space-y-2">
+                    <li>• كتابة المقالات والأبحاث</li>
+                    <li>• تحرير وتدقيق المحتوى</li>
+                    <li>• تنسيق وتنظيم الأفكار</li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                  <h3 className="font-semibold text-xl mb-3">الدعم التقني</h3>
+                  <p className="text-gray-400 mb-4">نقدم حلولاً تقنية وإرشادات في مجال التكنولوجيا والبرمجة</p>
+                  <ul className="text-sm text-gray-300 space-y-2">
+                    <li>• حل المشكلات التقنية</li>
+                    <li>• إرشادات البرمجة</li>
+                    <li>• نصائح أمن المعلومات</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* How It Works */}
+              <div className="text-center space-y-6">
+                <h2 className="text-2xl font-semibold">كيف يعمل المساعد الذكي؟</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="p-4 bg-gray-800/50 rounded-lg">
+                    <div className="text-3xl mb-3">1</div>
+                    <h4 className="font-medium mb-2">اطرح سؤالك</h4>
+                    <p className="text-sm text-gray-400">اكتب سؤالك أو استفسارك بشكل واضح في مربع المحادثة</p>
                   </div>
-                  <div className="p-4 bg-gray-800 rounded-lg">
-                    <h3 className="font-medium mb-2">Writing Assistance</h3>
-                    <p className="text-sm text-gray-400">Help with writing, editing, and proofreading</p>
+                  <div className="p-4 bg-gray-800/50 rounded-lg">
+                    <div className="text-3xl mb-3">2</div>
+                    <h4 className="font-medium mb-2">احصل على إجابة فورية</h4>
+                    <p className="text-sm text-gray-400">سيقوم المساعد الذكي بتحليل سؤالك وتقديم إجابة دقيقة وشاملة</p>
                   </div>
-                  <div className="p-4 bg-gray-800 rounded-lg">
-                    <h3 className="font-medium mb-2">Problem Solving</h3>
-                    <p className="text-sm text-gray-400">Get help with complex problems and calculations</p>
-                  </div>
-                  <div className="p-4 bg-gray-800 rounded-lg">
-                    <h3 className="font-medium mb-2">Learning Support</h3>
-                    <p className="text-sm text-gray-400">Explanations and tutorials on various subjects</p>
+                  <div className="p-4 bg-gray-800/50 rounded-lg">
+                    <div className="text-3xl mb-3">3</div>
+                    <h4 className="font-medium mb-2">تابع المحادثة</h4>
+                    <p className="text-sm text-gray-400">يمكنك طرح المزيد من الأسئلة للحصول على توضيحات إضافية</p>
                   </div>
                 </div>
               </div>
-              <div>
+
+              {/* Chat Input */}
+              <div className="max-w-2xl mx-auto w-full">
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
+                <p className="text-center text-sm text-gray-400 mt-4">ابدأ المحادثة الآن واحصل على المساعدة التي تحتاجها</p>
               </div>
             </div>
           ) : (
@@ -107,7 +147,7 @@ const Index = () => {
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
               </div>
               <div className="text-xs text-center text-gray-500 py-2">
-                Your conversations are automatically saved
+                يتم حفظ محادثاتك تلقائياً
               </div>
             </>
           )}
@@ -118,4 +158,3 @@ const Index = () => {
 };
 
 export default Index;
-
