@@ -73,63 +73,63 @@ const Index = () => {
           {messages.length === 0 ? (
             <div className="w-full max-w-4xl px-4 space-y-12">
               <div className="text-center space-y-6">
-                <h1 className="text-4xl font-semibold">مساعد نبراس الذكي</h1>
+                <h1 className="text-4xl font-semibold">Nibras AI Assistant</h1>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  مرحباً بك في مساعد نبراس الذكي - منصتك الشاملة للمساعدة في مختلف المجالات
+                  Welcome to Nibras AI Assistant - Your comprehensive platform for assistance in various fields
                 </p>
               </div>
 
               {/* Featured Services */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                  <h3 className="font-semibold text-xl mb-3">المساعدة التعليمية</h3>
-                  <p className="text-gray-400 mb-4">نقدم دعماً شاملاً في جميع المواد الدراسية، مع شرح مفصل وأمثلة عملية</p>
+                  <h3 className="font-semibold text-xl mb-3">Educational Support</h3>
+                  <p className="text-gray-400 mb-4">We provide comprehensive support in all academic subjects, with detailed explanations and practical examples</p>
                   <ul className="text-sm text-gray-300 space-y-2">
-                    <li>• شرح المفاهيم الأساسية</li>
-                    <li>• حل المسائل والتمارين</li>
-                    <li>• تقديم أمثلة توضيحية</li>
+                    <li>• Explaining core concepts</li>
+                    <li>• Solving problems and exercises</li>
+                    <li>• Providing illustrative examples</li>
                   </ul>
                 </div>
 
                 <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                  <h3 className="font-semibold text-xl mb-3">البحث والكتابة</h3>
-                  <p className="text-gray-400 mb-4">نساعدك في كتابة المحتوى وإجراء البحوث بجودة عالية</p>
+                  <h3 className="font-semibold text-xl mb-3">Research & Writing</h3>
+                  <p className="text-gray-400 mb-4">We help you create content and conduct research with high quality standards</p>
                   <ul className="text-sm text-gray-300 space-y-2">
-                    <li>• كتابة المقالات والأبحاث</li>
-                    <li>• تحرير وتدقيق المحتوى</li>
-                    <li>• تنسيق وتنظيم الأفكار</li>
+                    <li>• Writing articles and research papers</li>
+                    <li>• Content editing and proofreading</li>
+                    <li>• Organizing and structuring ideas</li>
                   </ul>
                 </div>
 
                 <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                  <h3 className="font-semibold text-xl mb-3">الدعم التقني</h3>
-                  <p className="text-gray-400 mb-4">نقدم حلولاً تقنية وإرشادات في مجال التكنولوجيا والبرمجة</p>
+                  <h3 className="font-semibold text-xl mb-3">Technical Support</h3>
+                  <p className="text-gray-400 mb-4">We provide technical solutions and guidance in technology and programming</p>
                   <ul className="text-sm text-gray-300 space-y-2">
-                    <li>• حل المشكلات التقنية</li>
-                    <li>• إرشادات البرمجة</li>
-                    <li>• نصائح أمن المعلومات</li>
+                    <li>• Solving technical issues</li>
+                    <li>• Programming guidance</li>
+                    <li>• Information security tips</li>
                   </ul>
                 </div>
               </div>
 
               {/* How It Works */}
               <div className="text-center space-y-6">
-                <h2 className="text-2xl font-semibold">كيف يعمل المساعد الذكي؟</h2>
+                <h2 className="text-2xl font-semibold">How Does the AI Assistant Work?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   <div className="p-4 bg-gray-800/50 rounded-lg">
                     <div className="text-3xl mb-3">1</div>
-                    <h4 className="font-medium mb-2">اطرح سؤالك</h4>
-                    <p className="text-sm text-gray-400">اكتب سؤالك أو استفسارك بشكل واضح في مربع المحادثة</p>
+                    <h4 className="font-medium mb-2">Ask Your Question</h4>
+                    <p className="text-sm text-gray-400">Write your question or inquiry clearly in the chat box</p>
                   </div>
                   <div className="p-4 bg-gray-800/50 rounded-lg">
                     <div className="text-3xl mb-3">2</div>
-                    <h4 className="font-medium mb-2">احصل على إجابة فورية</h4>
-                    <p className="text-sm text-gray-400">سيقوم المساعد الذكي بتحليل سؤالك وتقديم إجابة دقيقة وشاملة</p>
+                    <h4 className="font-medium mb-2">Get Instant Answers</h4>
+                    <p className="text-sm text-gray-400">The AI assistant will analyze your question and provide accurate, comprehensive answers</p>
                   </div>
                   <div className="p-4 bg-gray-800/50 rounded-lg">
                     <div className="text-3xl mb-3">3</div>
-                    <h4 className="font-medium mb-2">تابع المحادثة</h4>
-                    <p className="text-sm text-gray-400">يمكنك طرح المزيد من الأسئلة للحصول على توضيحات إضافية</p>
+                    <h4 className="font-medium mb-2">Continue the Conversation</h4>
+                    <p className="text-sm text-gray-400">You can ask follow-up questions to get additional clarification</p>
                   </div>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Index = () => {
               {/* Chat Input */}
               <div className="max-w-2xl mx-auto w-full">
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
-                <p className="text-center text-sm text-gray-400 mt-4">ابدأ المحادثة الآن واحصل على المساعدة التي تحتاجها</p>
+                <p className="text-center text-sm text-gray-400 mt-4">Start chatting now and get the help you need</p>
               </div>
             </div>
           ) : (
@@ -147,7 +147,7 @@ const Index = () => {
                 <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
               </div>
               <div className="text-xs text-center text-gray-500 py-2">
-                يتم حفظ محادثاتك تلقائياً
+                Your conversations are automatically saved
               </div>
             </>
           )}
