@@ -71,4 +71,38 @@ const Terms = () => {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4">6. إخلاء المسؤولية</h2>
-            <p className="text-gray-300 
+            <p className="text-gray-300 leading-relaxed">
+              يتم توفير خدماتنا "كما هي" دون أي ضمانات. لا نتحمل المسؤولية عن أي أضرار مباشرة أو غير مباشرة تنتج عن استخدام خدمتنا.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">7. التعديلات على الشروط</h2>
+            <p className="text-gray-300 leading-relaxed">
+              نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم إخطار المستخدمين بالتغييرات الجوهرية عبر البريد الإلكتروني أو إشعار على موقعنا.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">8. القانون المطبق</h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              تخضع هذه الشروط لقوانين المملكة العربية السعودية وتفسر وفقًا لها.
+            </p>
+          </section>
+
+          <section className="mt-8 border-t border-gray-800 pt-8">
+            <p className="text-gray-400 text-sm">
+              إذا كانت لديك أي أسئلة حول هذه الشروط والأحكام، يمكنك التواصل معنا عبر{" "}
+              <Link to="/contact" className="text-blue-400 hover:text-blue-300">
+                صفحة الاتصال
+              </Link>
+              .
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Terms;
