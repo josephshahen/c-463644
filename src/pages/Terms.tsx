@@ -9,92 +9,92 @@ const Terms = () => {
     <div className="min-h-screen bg-gray-900 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">الشروط والأحكام</h1>
-          <p className="text-gray-400">آخر تحديث: {lastUpdated}</p>
+          <h1 className="text-4xl font-bold mb-4">Terms and Conditions</h1>
+          <p className="text-gray-400">Last Updated: {lastUpdated}</p>
         </div>
         
-        <div className="space-y-8 text-right">
+        <div className="space-y-8">
           <section>
-            <h2 className="text-2xl font-semibold mb-4">1. الشروط</h2>
+            <h2 className="text-2xl font-semibold mb-4">1. Terms</h2>
             <p className="text-gray-300 leading-relaxed">
-              من خلال الوصول إلى واستخدام نبراس للذكاء الاصطناعي، فإنك توافق على الالتزام بهذه الشروط والأحكام وجميع القوانين واللوائح المعمول بها. إذا كنت لا توافق على أي من هذه الشروط، فيحظر عليك استخدام أو الوصول إلى هذه الخدمة.
+              By accessing and using Nibras AI, you agree to be bound by these terms and conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this service.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">2. ترخيص الاستخدام</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Usage License</h2>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                يُمنح الإذن مؤقتًا لاستخدام نبراس للذكاء الاصطناعي للاستخدام الشخصي غير التجاري فقط. هذا منح ترخيص، وليس نقل ملكية، وبموجب هذا الترخيص لا يجوز لك:
+                Permission is granted temporarily to use Nibras AI for personal, non-commercial use only. This is a grant of a license, not a transfer of title, and under this license you may not:
               </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
-                <li>تعديل أو نسخ المواد</li>
-                <li>استخدام المواد لأي غرض تجاري</li>
-                <li>محاولة فك تشفير أو هندسة عكسية لأي برنامج موجود في نبراس للذكاء الاصطناعي</li>
-                <li>إزالة أي حقوق نشر أو علامات ملكية أخرى</li>
-                <li>نقل المواد إلى شخص آخر أو نسخ المواد على أي خادم آخر</li>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Modify or copy the materials</li>
+                <li>Use the materials for any commercial purpose</li>
+                <li>Attempt to decompile or reverse engineer any software contained in Nibras AI</li>
+                <li>Remove any copyright or other proprietary notations</li>
+                <li>Transfer the materials to another person or mirror the materials on any other server</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">3. وصف الخدمة</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. Service Description</h2>
             <p className="text-gray-300 leading-relaxed">
-              يوفر نبراس للذكاء الاصطناعي مساعدة مدعومة بالذكاء الاصطناعي لأغراض تعليمية وبحثية ودعم تقني. بينما نسعى جاهدين لتقديم معلومات دقيقة ومفيدة، فإننا لا نضمن دقة أو اكتمال أو فائدة أي معلومات مقدمة من خلال خدمتنا.
+              Nibras AI provides AI-assisted support for educational, research, and technical purposes. While we strive to provide accurate and helpful information, we do not guarantee the accuracy, completeness, or usefulness of any information provided through our service.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">4. مسؤوليات المستخدم</h2>
+            <h2 className="text-2xl font-semibold mb-4">4. User Responsibilities</h2>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                يوافق مستخدمو نبراس للذكاء الاصطناعي على:
+                Users of Nibras AI agree to:
               </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
-                <li>تقديم معلومات دقيقة وكاملة عند استخدام الخدمة</li>
-                <li>استخدام الخدمة بطريقة قانونية وأخلاقية</li>
-                <li>عدم إساءة استخدام أو محاولة استغلال الخدمة</li>
-                <li>احترام حقوق الملكية الفكرية</li>
-                <li>عدم المشاركة في أي نشاط يمكن أن يضر أو يعطل الخدمة</li>
-                <li>الامتثال لجميع القوانين واللوائح المعمول بها</li>
-                <li>حماية معلومات تسجيل الدخول الخاصة بهم</li>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Provide accurate and complete information when using the service</li>
+                <li>Use the service in a legal and ethical manner</li>
+                <li>Not misuse or attempt to exploit the service</li>
+                <li>Respect intellectual property rights</li>
+                <li>Not engage in any activity that could harm or disrupt the service</li>
+                <li>Comply with all applicable laws and regulations</li>
+                <li>Protect their login credentials</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. الملكية الفكرية</h2>
+            <h2 className="text-2xl font-semibold mb-4">5. Intellectual Property</h2>
             <p className="text-gray-300 leading-relaxed">
-              جميع المحتوى المقدم على منصتنا، بما في ذلك النصوص والصور والرسومات والشعارات وأسماء المنتجات، محمي بموجب حقوق الطبع والنشر والعلامات التجارية وغيرها من حقوق الملكية الفكرية. لا يجوز استخدام أي من هذه المواد دون إذن كتابي صريح منا.
+              All content provided on our platform, including text, images, graphics, logos, product names, is protected by copyright, trademarks, and other intellectual property rights. None of these materials may be used without our express written permission.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. إخلاء المسؤولية</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Disclaimer</h2>
             <p className="text-gray-300 leading-relaxed">
-              يتم توفير خدماتنا "كما هي" دون أي ضمانات. لا نتحمل المسؤولية عن أي أضرار مباشرة أو غير مباشرة تنتج عن استخدام خدمتنا.
+              Our services are provided "as is" without any warranties. We do not accept responsibility for any direct or indirect damages resulting from the use of our service.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. التعديلات على الشروط</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Terms Modifications</h2>
             <p className="text-gray-300 leading-relaxed">
-              نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم إخطار المستخدمين بالتغييرات الجوهرية عبر البريد الإلكتروني أو إشعار على موقعنا.
+              We reserve the right to modify these terms at any time. Users will be notified of significant changes via email or notice on our website.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. القانون المطبق</h2>
+            <h2 className="text-2xl font-semibold mb-4">8. Governing Law</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              تخضع هذه الشروط لقوانين المملكة العربية السعودية وتفسر وفقًا لها.
+              These terms are governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia.
             </p>
           </section>
 
           <section className="mt-8 border-t border-gray-800 pt-8">
             <p className="text-gray-400 text-sm">
-              إذا كانت لديك أي أسئلة حول هذه الشروط والأحكام، يمكنك التواصل معنا عبر{" "}
+              If you have any questions about these Terms and Conditions, you can contact us through our{" "}
               <Link to="/contact" className="text-blue-400 hover:text-blue-300">
-                صفحة الاتصال
+                Contact page
               </Link>
               .
             </p>

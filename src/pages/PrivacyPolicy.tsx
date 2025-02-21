@@ -9,103 +9,103 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-gray-900 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">سياسة الخصوصية</h1>
-          <p className="text-gray-400">آخر تحديث: {lastUpdated}</p>
+          <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
+          <p className="text-gray-400">Last Updated: {lastUpdated}</p>
         </div>
         
-        <div className="space-y-8 text-right">
+        <div className="space-y-8">
           <section>
-            <h2 className="text-2xl font-semibold mb-4">مقدمة</h2>
+            <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
             <p className="text-gray-300 leading-relaxed">
-              في نبراس للذكاء الاصطناعي، نأخذ خصوصيتك على محمل الجد. تشرح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحماية معلوماتك عند استخدام منصتنا للمساعدة في الذكاء الاصطناعي. يرجى قراءة سياسة الخصوصية هذه بعناية. باستخدام خدمتنا، فإنك توافق على الممارسات الموضحة في هذه السياسة.
+              At Nibras AI, we take your privacy seriously. This privacy policy explains how we collect, use, and protect your information when using our AI assistance platform. Please read this privacy policy carefully. By using our service, you agree to the practices described in this policy.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">المعلومات التي نجمعها</h2>
+            <h2 className="text-2xl font-semibold mb-4">Information We Collect</h2>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                نحن نجمع المعلومات التي تقدمها لنا مباشرة عند استخدام خدمتنا:
+                We collect information that you provide directly to us when using our service:
               </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
-                <li>محادثات الدردشة والاستفسارات</li>
-                <li>معلومات الحساب (إذا قمت بإنشاء حساب)</li>
-                <li>بيانات الاستخدام والتفاعل مع منصتنا</li>
-                <li>معلومات تقنية عن جهازك واتصالك</li>
-                <li>المحتوى الذي تنشئه أو تشاركه على منصتنا</li>
-                <li>المراسلات مع فريق الدعم الفني</li>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Chat conversations and queries</li>
+                <li>Account information (if you create an account)</li>
+                <li>Usage and interaction data with our platform</li>
+                <li>Technical information about your device and connection</li>
+                <li>Content you create or share on our platform</li>
+                <li>Communications with our support team</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">كيف نستخدم معلوماتك</h2>
+            <h2 className="text-2xl font-semibold mb-4">How We Use Your Information</h2>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                نستخدم المعلومات التي نجمعها لأغراض متعددة:
+                We use the information we collect for multiple purposes:
               </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
-                <li>لتقديم وصيانة خدمتنا</li>
-                <li>لتحسين قدرات مساعدنا الذكي</li>
-                <li>لتخصيص تجربتك</li>
-                <li>للتواصل معك بخصوص التحديثات والتغييرات</li>
-                <li>لاكتشاف ومنع المشكلات التقنية</li>
-                <li>لتحليل وتحسين أداء خدماتنا</li>
-                <li>لتقديم محتوى مخصص وتوصيات مفيدة</li>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>To provide and maintain our service</li>
+                <li>To improve our AI assistant's capabilities</li>
+                <li>To personalize your experience</li>
+                <li>To communicate with you about updates and changes</li>
+                <li>To detect and prevent technical issues</li>
+                <li>To analyze and improve our services</li>
+                <li>To provide personalized content and recommendations</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">أمن البيانات</h2>
+            <h2 className="text-2xl font-semibold mb-4">Data Security</h2>
             <p className="text-gray-300 leading-relaxed">
-              نحن نطبق تدابير أمنية تقنية وتنظيمية مناسبة لحماية معلوماتك الشخصية. نستخدم تقنيات التشفير الحديثة وأفضل ممارسات الأمان لضمان سلامة بياناتك. ومع ذلك، يرجى ملاحظة أنه لا توجد طريقة نقل عبر الإنترنت أو طريقة تخزين إلكتروني آمنة بنسبة 100٪.
+              We implement appropriate technical and organizational security measures to protect your personal information. We use modern encryption technologies and best security practices to ensure your data safety. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">حقوقك</h2>
+            <h2 className="text-2xl font-semibold mb-4">Your Rights</h2>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                لديك حقوق معينة فيما يتعلق بمعلوماتك الشخصية:
+                You have certain rights regarding your personal information:
               </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
-                <li>الحق في الوصول إلى بياناتك الشخصية</li>
-                <li>الحق في تصحيح البيانات غير الدقيقة</li>
-                <li>الحق في طلب حذف بياناتك</li>
-                <li>الحق في تقييد معالجة بياناتك</li>
-                <li>الحق في نقل البيانات</li>
-                <li>الحق في الاعتراض على معالجة بياناتك</li>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Right to access your personal data</li>
+                <li>Right to correct inaccurate data</li>
+                <li>Right to request data deletion</li>
+                <li>Right to restrict data processing</li>
+                <li>Right to data portability</li>
+                <li>Right to object to data processing</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">ملفات تعريف الارتباط</h2>
+            <h2 className="text-2xl font-semibold mb-4">Cookies</h2>
             <p className="text-gray-300 leading-relaxed">
-              نستخدم ملفات تعريف الارتباط وتقنيات مماثلة لتحسين تجربتك على موقعنا. يمكنك تعديل إعدادات المتصفح الخاص بك لرفض ملفات تعريف الارتباط، ولكن هذا قد يؤثر على بعض وظائف موقعنا.
+              We use cookies and similar technologies to improve your experience on our website. You can modify your browser settings to decline cookies, but this may affect some functionalities of our site.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">التغييرات على سياسة الخصوصية</h2>
+            <h2 className="text-2xl font-semibold mb-4">Changes to Privacy Policy</h2>
             <p className="text-gray-300 leading-relaxed">
-              قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإخطارك بأي تغييرات جوهرية من خلال نشر السياسة الجديدة على هذه الصفحة وإخطارك عبر البريد الإلكتروني أو إشعار على موقعنا.
+              We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on this page and notifying you via email or website notice.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">اتصل بنا</h2>
+            <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
             <p className="text-gray-300 leading-relaxed mb-4">
-              إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على:
+              If you have any questions about this privacy policy, please contact us at:
             </p>
             <div className="bg-gray-800 p-6 rounded-lg">
-              <p className="text-gray-300">البريد الإلكتروني: support@nibrasai.com</p>
-              <p className="text-gray-300">الهاتف: +966 XX XXX XXXX</p>
+              <p className="text-gray-300">Email: support@nibrasai.com</p>
+              <p className="text-gray-300">Phone: +966 XX XXX XXXX</p>
               <p className="text-gray-300">
-                أو من خلال{" "}
+                Or through our{" "}
                 <Link to="/contact" className="text-blue-400 hover:text-blue-300">
-                  نموذج الاتصال
+                  contact form
                 </Link>
               </p>
             </div>
