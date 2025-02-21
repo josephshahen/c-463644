@@ -1,76 +1,74 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Terms = () => {
+  const lastUpdated = "2024-03-20";
+
   return (
     <div className="min-h-screen bg-gray-900 text-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Terms and Conditions</h1>
-        
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">1. Terms</h2>
-            <p className="text-gray-300 leading-relaxed">
-              By accessing and using Nibras AI Assistant, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this service.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">2. Use License</h2>
-            <div className="space-y-4">
-              <p className="text-gray-300 leading-relaxed">
-                Permission is granted to temporarily use Nibras AI Assistant for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Modify or copy the materials</li>
-                <li>Use the materials for any commercial purpose</li>
-                <li>Attempt to decompile or reverse engineer any software contained in Nibras AI Assistant</li>
-                <li>Remove any copyright or other proprietary notations</li>
-                <li>Transfer the materials to another person or mirror the materials on any other server</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">3. Service Description</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Nibras AI Assistant provides artificial intelligence-powered assistance for educational, research, and technical support purposes. While we strive to provide accurate and helpful information, we do not guarantee the accuracy, completeness, or usefulness of any information provided through our service.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">4. User Responsibilities</h2>
-            <div className="space-y-4">
-              <p className="text-gray-300 leading-relaxed">
-                Users of Nibras AI Assistant agree to:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Provide accurate and complete information when using the service</li>
-                <li>Use the service in a lawful and ethical manner</li>
-                <li>Not misuse or attempt to exploit the service</li>
-                <li>Respect intellectual property rights</li>
-                <li>Not engage in any activity that could harm or disrupt the service</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Disclaimer</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The materials on Nibras AI Assistant are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Contact Information</h2>
-            <p className="text-gray-300 leading-relaxed">
-              If you have any questions about these Terms and Conditions, please contact us at support@nibrasai.com
-            </p>
-          </section>
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">الشروط والأحكام</h1>
+          <p className="text-gray-400">آخر تحديث: {lastUpdated}</p>
         </div>
-      </div>
-    </div>
-  );
-};
+        
+        <div className="space-y-8 text-right">
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">1. الشروط</h2>
+            <p className="text-gray-300 leading-relaxed">
+              من خلال الوصول إلى واستخدام نبراس للذكاء الاصطناعي، فإنك توافق على الالتزام بهذه الشروط والأحكام وجميع القوانين واللوائح المعمول بها. إذا كنت لا توافق على أي من هذه الشروط، فيحظر عليك استخدام أو الوصول إلى هذه الخدمة.
+            </p>
+          </section>
 
-export default Terms;
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">2. ترخيص الاستخدام</h2>
+            <div className="space-y-4">
+              <p className="text-gray-300 leading-relaxed">
+                يُمنح الإذن مؤقتًا لاستخدام نبراس للذكاء الاصطناعي للاستخدام الشخصي غير التجاري فقط. هذا منح ترخيص، وليس نقل ملكية، وبموجب هذا الترخيص لا يجوز لك:
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
+                <li>تعديل أو نسخ المواد</li>
+                <li>استخدام المواد لأي غرض تجاري</li>
+                <li>محاولة فك تشفير أو هندسة عكسية لأي برنامج موجود في نبراس للذكاء الاصطناعي</li>
+                <li>إزالة أي حقوق نشر أو علامات ملكية أخرى</li>
+                <li>نقل المواد إلى شخص آخر أو نسخ المواد على أي خادم آخر</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">3. وصف الخدمة</h2>
+            <p className="text-gray-300 leading-relaxed">
+              يوفر نبراس للذكاء الاصطناعي مساعدة مدعومة بالذكاء الاصطناعي لأغراض تعليمية وبحثية ودعم تقني. بينما نسعى جاهدين لتقديم معلومات دقيقة ومفيدة، فإننا لا نضمن دقة أو اكتمال أو فائدة أي معلومات مقدمة من خلال خدمتنا.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">4. مسؤوليات المستخدم</h2>
+            <div className="space-y-4">
+              <p className="text-gray-300 leading-relaxed">
+                يوافق مستخدمو نبراس للذكاء الاصطناعي على:
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 mr-6">
+                <li>تقديم معلومات دقيقة وكاملة عند استخدام الخدمة</li>
+                <li>استخدام الخدمة بطريقة قانونية وأخلاقية</li>
+                <li>عدم إساءة استخدام أو محاولة استغلال الخدمة</li>
+                <li>احترام حقوق الملكية الفكرية</li>
+                <li>عدم المشاركة في أي نشاط يمكن أن يضر أو يعطل الخدمة</li>
+                <li>الامتثال لجميع القوانين واللوائح المعمول بها</li>
+                <li>حماية معلومات تسجيل الدخول الخاصة بهم</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">5. الملكية الفكرية</h2>
+            <p className="text-gray-300 leading-relaxed">
+              جميع المحتوى المقدم على منصتنا، بما في ذلك النصوص والصور والرسومات والشعارات وأسماء المنتجات، محمي بموجب حقوق الطبع والنشر والعلامات التجارية وغيرها من حقوق الملكية الفكرية. لا يجوز استخدام أي من هذه المواد دون إذن كتابي صريح منا.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">6. إخلاء المسؤولية</h2>
+            <p className="text-gray-300 
