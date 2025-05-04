@@ -1,12 +1,45 @@
 
 import OpenAI from 'openai';
 
-const OPENAI_API_KEY = "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";
+// Instead of hardcoding the API key, we'll create a way for users to input it
+let openaiApiKey: string | null = null;
+
+// Function to set the API key
+export const setApiKey = (key: string) => {
+  openaiApiKey = key;
+  localStorage.setItem('openai_api_key', key); // Store key in localStorage
+  return true;
+};
+
+// Function to get the API key (either from memory or localStorage)
+export const getApiKey = (): string | null => {
+  if (openaiApiKey) return openaiApiKey;
+  
+  const storedKey = localStorage.getItem('openai_api_key');
+  if (storedKey) {
+    openaiApiKey = storedKey;
+    return storedKey;
+  }
+  
+  return null;
+};
+
+// Function to clear the API key
+export const clearApiKey = () => {
+  openaiApiKey = null;
+  localStorage.removeItem('openai_api_key');
+};
 
 export const getChatResponse = async (message: string) => {
   try {
+    const apiKey = getApiKey();
+    
+    if (!apiKey) {
+      throw new Error("Please set your OpenAI API key first");
+    }
+    
     const openai = new OpenAI({
-      apiKey: OPENAI_API_KEY,
+      apiKey: apiKey,
       dangerouslyAllowBrowser: true // Note: In production, use server-side API calls
     });
 

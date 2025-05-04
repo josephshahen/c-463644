@@ -1,11 +1,12 @@
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Sidebar from "@/components/Sidebar";
 import ChatHeader from "@/components/ChatHeader";
 import ChatInput from "@/components/ChatInput";
 import ActionButtons from "@/components/ActionButtons";
 import MessageList from "@/components/MessageList";
-import { getChatResponse } from "@/services/ai";
+import { getChatResponse, setApiKey, getApiKey } from "@/services/ai";
 import { Link } from "react-router-dom";
 
 type Message = {
@@ -17,13 +18,42 @@ const Index = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [apiKey, setApiKeyState] = useState<string>("");
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Load previously stored API key on component mount
+    const storedKey = getApiKey();
+    if (storedKey) {
+      setApiKeyState(storedKey);
+    }
+  }, []);
+
+  const handleApiKeyChange = (newKey: string) => {
+    setApiKeyState(newKey);
+    if (newKey) {
+      setApiKey(newKey);
+      toast({
+        title: "API Key Set",
+        description: "Your OpenAI API key has been saved successfully.",
+      });
+    }
+  };
 
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) {
       toast({
-        title: "خطأ",
-        description: "الرجاء إدخال رسالة",
+        title: "Error",
+        description: "Please enter a message",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (!getApiKey()) {
+      toast({
+        title: "API Key Required",
+        description: "Please set your OpenAI API key in the sidebar first.",
         variant: "destructive"
       });
       return;
@@ -49,7 +79,7 @@ const Index = () => {
       setMessages([...newMessages, assistantMessage]);
     } catch (error: any) {
       toast({
-        title: "خطأ",
+        title: "Error",
         description: error.message,
         variant: "destructive"
       });
@@ -63,7 +93,7 @@ const Index = () => {
       <Sidebar 
         isOpen={isSidebarOpen} 
         onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
-        onApiKeyChange={() => {}}
+        onApiKeyChange={handleApiKeyChange}
       />
       
       <main className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
