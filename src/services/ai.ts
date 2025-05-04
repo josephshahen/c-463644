@@ -2,7 +2,7 @@
 import OpenAI from 'openai';
 
 // Instead of hardcoding the API key, we'll create a way for users to input it
-let openaiApiKey: string | null = null;
+let openaiApiKey: string | null = "sk-9d1126e487eb4339bac858549debd760";
 
 // Function to set the API key
 export const setApiKey = (key: string) => {
@@ -21,12 +21,12 @@ export const getApiKey = (): string | null => {
     return storedKey;
   }
   
-  return null;
+  return openaiApiKey;  // Return the default key if no custom key is set
 };
 
 // Function to clear the API key
 export const clearApiKey = () => {
-  openaiApiKey = null;
+  openaiApiKey = "sk-9d1126e487eb4339bac858549debd760"; // Reset to default
   localStorage.removeItem('openai_api_key');
 };
 

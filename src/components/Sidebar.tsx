@@ -1,6 +1,10 @@
 
-import { Menu, MessageSquare } from "lucide-react";
+import { Menu, MessageSquare, Key } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { getApiKey } from "@/services/ai";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,7 +12,20 @@ interface SidebarProps {
   onApiKeyChange: (apiKey: string) => void;
 }
 
-const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
+const Sidebar = ({ isOpen, onToggle, onApiKeyChange }: SidebarProps) => {
+  const [apiKey, setApiKey] = useState("");
+  const [hasKey, setHasKey] = useState(false);
+
+  useEffect(() => {
+    // Check if API key exists
+    const key = getApiKey();
+    if (key) {
+      setHasKey(true);
+      // Don't set the actual key in the state for security
+      setApiKey("••••••••••••••••••••••••••••");
+    }
+  }, []);
+
   const savedConversations = [
     { title: "Today", items: [] },
     { 
@@ -29,6 +46,12 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
     }
   ];
 
+  const handleApiKeySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onApiKeyChange(apiKey);
+    setHasKey(true);
+  };
+
   return (
     <div className={cn(
       "fixed top-0 left-0 z-40 h-screen bg-chatgpt-sidebar transition-all duration-300",
@@ -43,6 +66,52 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
             <MessageSquare className="h-4 w-4" />
             <span>New Chat</span>
           </button>
+        </div>
+
+        {/* API Key Section */}
+        <div className="py-4 border-b border-white/20">
+          <div className="flex items-center gap-2 px-3 pb-2">
+            <Key className="h-4 w-4" />
+            <span className="text-sm font-medium">OpenAI API Key</span>
+          </div>
+          
+          {hasKey ? (
+            <div className="px-3 py-2">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 bg-green-500 rounded-full"></div>
+                <span className="text-xs text-green-500">API Key is set</span>
+              </div>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="mt-2 w-full text-xs"
+                onClick={() => {
+                  setHasKey(false);
+                  setApiKey("");
+                }}
+              >
+                Change Key
+              </Button>
+            </div>
+          ) : (
+            <form onSubmit={handleApiKeySubmit} className="px-3">
+              <Input
+                type="password"
+                placeholder="Enter your OpenAI API key"
+                value={apiKey}
+                onChange={(e) => setApiKey(e.target.value)}
+                className="text-xs mb-2"
+              />
+              <Button 
+                type="submit" 
+                size="sm" 
+                className="w-full text-xs"
+                disabled={!apiKey.trim()}
+              >
+                Save Key
+              </Button>
+            </form>
+          )}
         </div>
 
         <div className="flex-col flex-1 transition-opacity duration-500 relative -mr-2 pr-2 overflow-y-auto">
@@ -84,4 +153,3 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
 };
 
 export default Sidebar;
-
